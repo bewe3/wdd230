@@ -88,6 +88,10 @@ html {
     padding: 1em;
 }
 
+h1 {
+    font-weight: 700;
+}
+
 @media screen and (max-width: 600px) {
     #header {
         display: flex;
