@@ -1,0 +1,42 @@
+:root {
+    --main: #3F7D20;
+    --main-light: #72B01D;
+    --main-dark: #264416;
+    --background: #F3EFF5;
+    --text-main: #0D0A0B;
+    --text-subtitle: #454955;
+    --accent: #D1AC00;
+    --accent-light: #FFD61F;
+    --accent-dark: #A38500;
+}
+
+html {
+    background-color: var(--main-dark);
+}
+
+#header {
+    background-color: var(--main);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--accent-dark);
+    min-height: 125px;
+    max-height: 200px;
+}
+
+#profile-box {
+    padding: 1em;
+    min-height: 125px;
+    max-height: 200px;
+}
+
+#profile {
+    max-width: 12%;
+    border-radius: 7%;
+    min-height: 75px;
+    max-height: 150px;
+    min-width: 75px;
+    max-width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-style: solid;
+    border-color: var(--accent);
+}
