@@ -22,7 +22,7 @@ html {
     color: var(--text-main);
 }
 
-#header {
+header {
     background-color: var(--background-light);
     margin: auto;
     border-style: none none solid none;
@@ -93,7 +93,7 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-    #header {
+    header {
         display: flex;
     }
 
