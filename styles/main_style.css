@@ -92,6 +92,10 @@ h1 {
     font-weight: 700;
 }
 
+#spacer {
+    min-height: 300px;
+}
+
 footer {
     background-color: var(--main-light);
     position: fixed;
