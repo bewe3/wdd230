@@ -80,7 +80,7 @@ header {
 #document-body-background {
     margin: auto;
     background-color: var(--background-dark);
-    max-width: 90%;
+    max-width: 75%;
     margin-top: 225px;
     padding: 1em;
 }
