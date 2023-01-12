@@ -65,12 +65,16 @@ header {
 #title {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-subtitle);
-    font-size: 24pt;
+    font-size: 5vw;
 }
 
 #title,
 #name {
     width: 100%;
+}
+
+#name {
+    font-size: 7.4vw;
 }
 
 #document-body-background {
@@ -108,7 +112,7 @@ footer {
     color: var(--frame);
     vertical-align: middle;
     flex-direction: column;
-    font-size: 10pt;
+    font-size: 3vw;
 }
 
 footer p {
@@ -125,20 +129,12 @@ footer span {
     justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
-    header {
-        display: flex;
-    }
-
+@media screen and (min-width: 640px) {
     #title {
-        font-size: 5vw;
-    }
-
-    #name {
-        font-size: 7.4vw;
+        font-size: 24pt;
     }
 
     footer {
-        font-size: 3vw;
+        font-size: 10pt;
     }
 }
