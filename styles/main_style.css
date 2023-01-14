@@ -5,15 +5,12 @@
 :root {
     --main: #121e12;
     --main-light: #1f3a22;
-    --main-superlight: #417146;
     --background-light: #Fcf8f2;
     --background-dark: #e7cbaa;
     --frame: #b89965;
     --text-main: #292826;
     --text-subtitle: #565452;
-    --accent: #d9aa62;
-    --accent-light: #edd4a7;
-    --accent-dark: #c8a336;
+    --text-footer: #b89965;
 }
 
 html {
@@ -109,7 +106,7 @@ footer {
     justify-content: center;
     width: 100%;
     text-align: center;
-    color: var(--frame);
+    color: var(--text-footer);
     vertical-align: middle;
     flex-direction: column;
     font-size: 3vw;
