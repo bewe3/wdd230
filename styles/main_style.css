@@ -89,6 +89,16 @@ header {
     padding: 1em;
 }
 
+#container {
+    display: flex;
+}
+
+#WDD,
+#tests {
+    padding: 0.5em;
+    width: 50%;
+}
+
 h1 {
     font-weight: 700;
 }
