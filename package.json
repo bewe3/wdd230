@@ -1,0 +1,25 @@
+{
+  "name": "wdd230",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bewe3/wdd230.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bewe3/wdd230/issues"
+  },
+  "homepage": "https://github.com/bewe3/wdd230#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
