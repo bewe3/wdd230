@@ -1,3 +1,4 @@
+window.onload = function () {
 const input = document.querySelector('input[type="text"]');
 const btn = document.querySelector('button[type="submit"]');
 const list = document.querySelector('ul#list');
@@ -27,3 +28,4 @@ btn.addEventListener('click', function(event) {
   input.value = '';
   input.focus();
 });
+}
