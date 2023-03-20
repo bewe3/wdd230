@@ -49,15 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function getBusinessData() {
         const response = await loadJsonData();
-        if (response.ok) {
             const data = await response.json();
             displayBusinesses(data.businesses);
             console.table(data.businesses);
-        } else {
-            console.error("There was an error loading the data.");
-            const cards = document.querySelector("#cards");
-            cards.innerHTML = "<section><h1>There was an error loading the data</h1></section>";
-        }
     }
 
     getBusinessData();
