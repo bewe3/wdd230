@@ -604,6 +604,10 @@ video {
   z-index: 30;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .col-start-2 {
   grid-column-start: 2;
 }
