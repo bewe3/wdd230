@@ -1,56 +1,61 @@
+// Toggle active/not active buttons
 document.addEventListener('DOMContentLoaded', () => {
-    var gridView = document.querySelector('#grid');
-    var listView = document.querySelector('#list');
+    var gridSelector = document.querySelector('.grid-button');
+    var listSelector = document.querySelector('.list-button');
     var directoryData = document.querySelector('#directory-grid');
 
-    gridView.addEventListener('click', () => {
-        if (!gridView.classList.contains('active')) {
-            gridView.classList.add('active');
-            listView.classList.remove('active');
+    gridSelector.addEventListener('click', ()=>{
+        if (!gridSelector.classList.contains('directory-active')){    
+            gridSelector.classList.add('directory-active');
+            listSelector.classList.remove('directory-active');
             directoryData.classList.add('directory-cards')
             directoryData.classList.remove('directory-list')
         }
     });
 
-    listView.addEventListener('click', () => {
-        if (!listView.classList.contains('active')) {
-            listView.classList.add('active');
-            gridView.classList.remove('active');
+    listSelector.addEventListener('click', ()=>{
+        if (!listSelector.classList.contains('directory-active')){
+            listSelector.classList.add('directory-active');
+            gridSelector.classList.remove('directory-active');
             directoryData.classList.add('directory-list')
             directoryData.classList.remove('directory-cards')
         }
     });
 
-    const businessesData = "./data/businesses.json";
+    // Load JSON file
+    const url = "./data/businesses.json";
 
-    const displayBusinesses = (businessOrg) => {
-        const cards = document.querySelector(".directory-cards");
+    const displayBusinesses = (businesss) => {
+    const cards = document.querySelector(".directory-cards"); // select the output container element
 
-        businessOrg.forEach((business) => {
-            let card = document.createElement("section");
-            card.innerHTML = `
-                <img src="${business.logo}">
-                <p>${business.name}</p>
-                <p>${business.address}</p>
-                <p>${business.phone}</p>
-                <p><a href="${business.url}">${business.url}</a></p>
-                `;
-            cards.appendChild(card);
-        });
-  
+    businesss.forEach((business) => {
+        let card = document.createElement("section");
+        card.innerHTML = `
+        <img src="${business.imgURL}">
+        <p>${business.businessName}</p>
+        <p>${business.streetAddress}</p>
+        <p>${business.cityStateZip}</p>
+        <p><a href="${business.websiteURL}">${business.websiteURL}</a></p>
+        `;
+        if (business.membershipLevel=='gold'){
+        card.classList.add('gold-member');
+        }
+        cards.appendChild(card);
+    }); 
+    
     };
 
     async function getBusinessData() {
-        const response = await fetch(businessesData);
-        if (response.ok) {
-            const data = await response.json();
-            displayBusinesses(data.businesses);
-            console.table(data.businesses);
-        } else {
-            console.error("There was an error loading the data.");
-            const cards = document.querySelector(".directory-cards");
-            cards.innerHTML = "<section><h1>There was an error loading the data</h1></section>";
-        }
+    const response = await fetch(url);
+    if (response.ok) {
+        const data = await response.json();
+        displayBusinesses(data.businesses);
+        console.table(data.businesses);
+    } else {
+        console.error("There was an error loading the data.");
+        const cards = document.querySelector(".directory-cards");
+        cards.innerHTML = "<section><h1>There was an error loading the data</h1></section>";
+    }
     }
 
     getBusinessData();
