@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const spot = document.querySelector("#spots");
+    const spot = document.querySelector(".spots");
 
     const dataPath = "./data/businesses.json";
 
