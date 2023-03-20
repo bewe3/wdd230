@@ -4,18 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
     var directoryData = document.querySelector('#directory-grid');
 
     gridView.addEventListener('click', () => {
-        if (!gridView.classList.contains('directory-active')) {
-            gridView.classList.add('directory-active');
-            listView.classList.remove('directory-active');
+        if (!gridView.classList.contains('active')) {
+            gridView.classList.add('active');
+            listView.classList.remove('active');
             directoryData.classList.add('directory-cards')
             directoryData.classList.remove('directory-list')
         }
     });
 
     listView.addEventListener('click', () => {
-        if (!listView.classList.contains('directory-active')) {
-            listView.classList.add('directory-active');
-            gridView.classList.remove('directory-active');
+        if (!listView.classList.contains('active')) {
+            listView.classList.add('active');
+            gridView.classList.remove('active');
             directoryData.classList.add('directory-list')
             directoryData.classList.remove('directory-cards')
         }
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const businessesData = "./data/businesses.json";
 
     const displayBusinesses = (businessOrg) => {
-        const cards = document.querySelector("#cards");
+        const cards = document.querySelector(".directory-cards");
 
         businessOrg.forEach((business) => {
             let card = document.createElement("section");
@@ -42,9 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function getBusinessData() {
         const response = await fetch(businessesData);
-        const data = await response.json();
-        console.log(data)
-        return data;
+        if (response.ok) {
+            const data = await response.json();
+            displayBusinesses(data.businesses);
+            console.table(data.businesses);
+        } else {
+            console.error("There was an error loading the data.");
+            const cards = document.querySelector(".directory-cards");
+            cards.innerHTML = "<section><h1>There was an error loading the data</h1></section>";
+        }
     }
 
     getBusinessData();
