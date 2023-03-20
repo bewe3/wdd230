@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function loadData() {
-        const descriptionBusData = await loadJsonData();
+        const businessData = await loadJsonData();
         let idArray = [];
 
-        descriptionBusData.map(({ membership, id }) => {
+        businessData.map(({ membership, id }) => {
             if (membership === "gold") {
                 idArray.push(id);
             }
@@ -25,19 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < 3; i++) {
             let rndIndex = Math.floor(Math.random() * idArray.length);
             const selectedId = idArray[rndIndex];
-            const selectedBusData = descriptionBusData.find(
-                (bus) => bus.id === selectedId && bus.membership === "gold"
+            const selectedBusiness = businessData.find(
+                (business) => business.id === selectedId && business.membershipLevel === "gold"
             );
 
-            const newBusDiv = document.createElement("div");
-            newBusDiv.setAttribute("id", "spot");
-            newBusDiv.innerHTML = `
-        <img src="${selectedBusData.logo}">
-        <h1>${selectedBusData.name}</h1>
-        <p>${selectedBusData.address}</p>
-        <p>${selectedBusData.phone}</p>
+            const newBusiness = document.createElement("div");
+            newBusiness.setAttribute("id", "spot");
+            newBusiness.innerHTML = `
+        <a href="${selectedBusiness.url}"><img src="${selectedBusiness.logo}"></a>
+        <h1>${selectedBusiness.name}</h1>
+        <p>${selectedBusiness.address}</p>
+        <p>${selectedBusiness.phone}</p>
         `;
-            spot.append(newBusDiv);
+            spot.append(newBusiness);
             idArray.splice(rndIndex, 1);
         }
     }
