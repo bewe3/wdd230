@@ -61,13 +61,13 @@
         </button>
         <ul class="hidden md:flex text-slate-200 w-full text-center items-center [&>*]:w-full lg:[&>*]:w-3/12"
             id="navbar-menu">
-            <li class="hover:bg-slate-200 hover:text-slate-700 !bg-slate-200 !text-slate-700 cursor-pointer p-2">
+            <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
                 <a href="./index.html" class="block text-lg">Home</a>
             </li>
             <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
                 <a href="./discover.html" class="block text-lg">Discover</a>
             </li>
-            <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
+            <li class="hover:bg-slate-200 hover:text-slate-700  !bg-slate-200 !text-slate-700 cursor-pointer p-2">
                 <a href="./join.html" class="block text-lg">Join</a>
             </li>
             <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
@@ -76,9 +76,9 @@
         </ul>
     </nav>
 
-    <main class="mt-44 bg-white h-5/6 flex justify-between [&>*]:bg-slate-200 [&>*]:rounded-md [&>*]:shadow-lg">
-        <div class="p-6 w-5/12">
-            <form method="GET" action="thankyou.html">
+    <main class="p-6 mt-44 bg-white h-5/6 flex justify-between [&>*]:bg-slate-200 [&>*]:rounded-md [&>*]:shadow-lg">
+        <div class="p-6 w-full">
+            <form method="GET" action="thankyou.html" class="[&>*]:p-4 [&>input]:m-3 [&>input]:w-1/2">
                 <label for="fname">First name:*</label><br>
                 <input type="text" id="fname" name="fname" required><br>
                 <br>
@@ -87,8 +87,8 @@
                 <input type="text" id="lname" name="lname" required><br>
                 <br>
 
-                <label for="position">Position:</label><br>
-                <input type="text" id="position" name="position" pattern="[a-zA-Z- ]{2,20}"><br>
+                <label for="title">Title [Optional]:</label><br>
+                <input type="text" id="title" name="title" pattern="[a-zA-Z- ]{7,50}"><br>
                 <br>
 
                 <label for="email">Email:*</label><br>
@@ -104,53 +104,62 @@
                 <input type="text" id="org_name" name="org_name" required><br>
                 <br>
 
-                <p>Please Select a Membership Level:</p>
+                <p>Select a Membership [Optional]:</p>
 
-                <input type="radio" id="np" name="membership" value="np">
-                <label for="np">NP Membership for Non Profits</label><br>
-                <input type="radio" id="bronze" name="membership" value="bronze">
-                <label for="bronze">Bronze Membership</label><br>
-                <input type="radio" id="silver" name="membership" value="silver">
-                <label for="silver">Silver Membership</label><br>
-                <input type="radio" id="gold" name="membership" value="gold">
-                <label for="gold">Gold Membership</label><br><br>
-                <label for="businessD">Business Description:</label><br>
-                <textarea id="businessD" name="businessD" rows="10" cols="40">Please provide a description of your business.</textarea>
+                <input type="radio" id="np" name="membership" value="np" class="!w-2">
+                <label for="np">Non-Profit</label><br>
+                <input type="radio" id="bronze" name="membership" value="bronze" class="!w-2">
+                <label for="bronze">Bronze</label><br>
+                <input type="radio" id="silver" name="membership" value="silver" class="!w-2">
+                <label for="silver">Silver</label><br>
+                <input type="radio" id="gold" name="membership" value="gold" class="!w-2">
+                <label for="gold">Gold</label><br><br>
+                <label for="businessD">Business Description [Optional]:</label><br>
+                <textarea id="businessD" name="businessD" rows="10" cols="40" placeholder="Please provide a description of your business." class="mt-3"></textarea>
                 <input type="hidden" id="hiddenTime">
                 <br><br>
-                <input type="submit" id="submit-button" value="Join the Chamber!" class="rounded">
+                <input type="submit" id="submit-button" value="Join the Chamber!" class="bg-slate-800 text-white py-2 px-4 rounded-md mt-8 inline-block hover:bg-slate-700 cursor-pointer">
 
 
             </form>
         </div>
 
-        <div class="p-6 w-5/12">
-            <h1 class="font-bold">Membership Level Benefits</h1>
+        <div class="p-6 absolute right-0 top-0 mr-16 mt-64 !bg-slate-300 [&>hr]:p-3 [&>hr]:mt-3">
+            <h1 class="font-bold text-center">Membership Benefits</h1>
+            <hr class="h-1">
+            <div>
             <h2 class="font-semibold">Non-Profit</h2>
             <ul class="ml-4">
                 <li>5% off events and advertising</li>
                 <li>No fee for Non-profits</li>
             </ul>
+            </div>
             <hr class="h-1">
+            <div>
             <h2 class="font-semibold">Bronze Membership</h2>
             <ul class="ml-4">
                 <li>25% off events and advertising</li>
                 <li>₫1.000.000/month</li>
             </ul>
+            </div>
             <hr class="h-1">
-            <h2 class="font-semibold">Silver Membership</h2>
-            <ul class="ml-4">
-                <li>50% off events and advertising</li>
-                <li>Stock Exchange Position</li>
-                <li>₫2.500.000/month</li>
-            </ul>
+            <div>
+                <h2 class="font-semibold">Silver Membership</h2>
+                <ul class="ml-4">
+                    <li>50% off events and advertising</li>
+                    <li>Stock Exchange title</li>
+                    <li>₫2.500.000/month</li>
+                </ul>
+            </div>
             <hr class="h-1">
-            <h2 class="font-semibold">Gold Membership</h2>
-            <ul class="ml-4">
-                <li>75% off events and advertising</li>
-                <li>Stock Exchange Position</li>
-                <li>₫5.000.000/month</li>
-            </ul>
+            <div>
+                <h2 class="font-semibold">Gold Membership</h2>
+                <ul class="ml-4">
+                    <li>75% off events and advertising</li>
+                    <li>Stock Exchange title</li>
+                    <li>₫5.000.000/month</li>
+                </ul>
+            </div>
         </div>
     </main>
 
