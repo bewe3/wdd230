@@ -14,6 +14,7 @@
     <link href="../dist/output.css" rel="stylesheet">
     <script src="./scripts/script.js"></script>
     <script src="./scripts/lazy.js"></script>
+    <script src="./scripts/last.js"></script>
 </head>
 
 <!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
@@ -127,9 +128,9 @@
             </div>
         
         </section>
-        <div>
+        <div class="text-center p-2">
             <p>
-                You last visited this page <span id="time_difference"></span> days
+                You last visited this page <span id="lastVisited"></span> days
                 ago.
             </p>
         </div>
