@@ -14,19 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadData() {
         const businessData = await loadJsonData();
-        let idArray = [];
+        let array = [];
 
         businessData.map(({ membership, id }) => {
-            if (membership === "gold") {
-                idArray.push(id);
+            if (membership === "gold" || membership === "silver") {
+                array.push(id);
             }
         });
 
         for (let i = 0; i < 3; i++) {
-            let rndIndex = Math.floor(Math.random() * idArray.length);
-            const selectedId = idArray[rndIndex];
+            let randomint = Math.floor(Math.random() * array.length);
+            const selectedId = array[randomint];
             const selectedBusiness = businessData.find(
-                (business) => business.id === selectedId && business.membershipLevel === "gold"
+                (business) => business.id === selectedId && (business.membershipLevel === "gold" || business.membershipLevel === "silver")
             );
 
             const newBusiness = document.createElement("div");
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>${selectedBusiness.phone}</p>
         `;
             spot.append(newBusiness);
-            idArray.splice(rndIndex, 1);
+            array.splice(randomint, 1);
         }
     }
 
