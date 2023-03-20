@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //json stuff
     const url = "./data/businesses.json";
+    console.log(url);
 
     const displayBusinesses = (businessses) => {
     const cards = document.querySelector(".directory-cards"); 
