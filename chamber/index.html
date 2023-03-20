@@ -93,12 +93,18 @@
             </div>
             <div class="row-start-3 md:row-start-5 lg:col-start-1 lg:row-start-2" id="non-hero">
                 <h1 class="text-slate-800 font-bold text-center">Weather</h1>
-                <div class="weather-container">
+                <div id="weather-info">
                     <figure>
-                        <img src="" alt="" id="weather-icon">
+                        <img src="https://dummyimage.com/640x360/fff/aaa" alt="" id="weatherIcon">
                         <figcaption></figcaption>
                     </figure>
-                    <span id="current-temp"></span> &deg;F
+                
+                    <h3><span id="temperature"></span>&deg;F <br> <br> <span id="description"></span></h3>
+                </div>
+                <hr>
+                <div id="wind-info">
+                    <h4>Wind Speed: <span id="windspeed"></span>mph</h4>
+                    <h4>Wind Chill: <span id="windchill"></span></h4>
                 </div>
             </div>
         </div>
