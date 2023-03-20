@@ -25,27 +25,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //json stuff
-    const url = "./data/businesses.json";
+    
+    const url = "chamber/data/businesses.json";
     console.log(url);
 
-    const displayBusinesses = (businessses) => {
+const displayBusinesses = (businessses) => {
     const cards = document.querySelector(".directory-cards"); 
 
-    businessses.forEach((businesses) => {
-        let card = document.createElement("section");
-        card.innerHTML = `
-        <img src="${businesses.logo}" alt="${businesses.name}">
-        <p>${businesses.name}</p>
-        <p>${businesses.address}</p>
-        <p><a href="${businesses.url}">${businesses.name}</a></p>
-        `;
-        if (businesses.membershipLevel=='Gold'){
-        card.classList.add('gold-member');
-        }
-        cards.appendChild(card);
-    }); 
-    
-    }; 
+    if (businessses) {
+        businessses.forEach((businesses) => {
+            let card = document.createElement("section");
+            card.innerHTML = `
+            <img src="${businesses.logo}" alt="${businesses.name}">
+            <p>${businesses.name}</p>
+            <p>${businesses.address}</p>
+            <p><a href="${businesses.url}">${businesses.name}</a></p>
+            `;
+            if (businesses.membershipLevel=='Gold'){
+                card.classList.add('gold-member');
+            }
+            cards.appendChild(card);
+        });
+    } else {
+        console.error("No business data was found.");
+    }
+}; 
+ 
 
     async function getBusinessData() {
     const response = await fetch(url);
