@@ -1,5 +1,5 @@
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', () => {
     var gridSelector = document.querySelector("#directory-grid");
     var listSelector = document.querySelector('#directory-list');
     var directoryData = document.querySelector('#directory-data');
@@ -60,4 +60,4 @@ window.onload = function () {
 
     getBusinessData();
 
-}
+});
