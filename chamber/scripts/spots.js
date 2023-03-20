@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const newBusiness = document.createElement("div");
             newBusiness.setAttribute("id", "spot");
             newBusiness.innerHTML = `
-        <a href="${selectedBusiness.url}"><img src="${selectedBusiness.logo}" class="h-28 rounded-md"></a>
+        <a href="${selectedBusiness.url}" class="flex justify-center"><img src="${selectedBusiness.logo}" class="h-28 rounded-md justify-center"></a>
         <h1 class="text-center">${selectedBusiness.name}</h1>
         <p class="text-center">${selectedBusiness.address}</p>
         <p class="text-center">${selectedBusiness.phone}</p>
