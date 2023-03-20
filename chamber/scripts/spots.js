@@ -8,6 +8,7 @@ window.onload = function () {
     async function loadJsonData() {
         const response = await fetch(dataPath);
         const data = await response.json();
+        console.log(data)
         return data;
     }
 
