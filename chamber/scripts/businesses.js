@@ -29,27 +29,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = "chamber/data/businesses.json";
     console.log(url);
 
-const displayBusinesses = (businessses) => {
-    const cards = document.querySelector(".directory-cards"); 
+    const displayBusinesses = (businessses) => {
+        const cards = document.querySelector(".directory-cards"); 
 
-    if (businessses) {
-        businessses.forEach((businesses) => {
-            let card = document.createElement("section");
-            card.innerHTML = `
-            <img src="${businesses.logo}" alt="${businesses.name}">
-            <p>${businesses.name}</p>
-            <p>${businesses.address}</p>
-            <p><a href="${businesses.url}">${businesses.name}</a></p>
-            `;
-            if (businesses.membershipLevel=='Gold'){
-                card.classList.add('gold-member');
-            }
-            cards.appendChild(card);
-        });
-    } else {
-        console.error("No business data was found.");
-    }
-}; 
+        if (businessses) {
+            businessses.forEach((businesses) => {
+                let card = document.createElement("section");
+                card.innerHTML = `
+                <img src="${businesses.logo}" alt="${businesses.name}">
+                <p>${businesses.name}</p>
+                <p>${businesses.address}</p>
+                <p><a href="${businesses.url}">${businesses.name}</a></p>
+                `;
+                if (businesses.membershipLevel=='Gold'){
+                    card.classList.add('gold-member');
+                }
+                cards.appendChild(card);
+            });
+        } else {
+            console.error("No business data was found.");
+        }
+    }; 
  
 
     async function getBusinessData() {
