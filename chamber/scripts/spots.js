@@ -32,12 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const newBusDiv = document.createElement("div");
             newBusDiv.setAttribute("id", "spot");
             newBusDiv.innerHTML = `
-        <a href="${selectedBusData.url}"><img src="${selectedBusData.logo}"></a>
+        <img src="${selectedBusData.logo}">
         <h1>${selectedBusData.name}</h1>
         <p>${selectedBusData.address}</p>
         <p>${selectedBusData.phone}</p>
         `;
-
             spot.append(newBusDiv);
             idArray.splice(rndIndex, 1);
         }
