@@ -40,18 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
     };
 
-    async function loadJsonData() {
+    async function getBusinessData() {
         const response = await fetch(businessesData);
         const data = await response.json();
         console.log(data)
         return data;
-    }
-
-    async function getBusinessData() {
-        const response = await loadJsonData();
-            const data = await response.json();
-            displayBusinesses(data.businesses);
-            console.table(data.businesses);
     }
 
     getBusinessData();
