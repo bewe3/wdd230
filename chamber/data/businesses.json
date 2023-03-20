@@ -62,5 +62,13 @@
     "url": "http://www.artistic-hair.com/",
     "logo": "./images/the-artistic-hair-salon-logo.png",
     "membershipLevel": "silver"
+  },
+  {
+    "name": "Giggles Day Care",
+    "address": "789 Vo Thi Sau Street, District 3, Ho Chi Minh City",
+    "phone": "+84 29 3962 3452",
+    "url": "http://www.giggles-day-care.com/",
+    "logo": "./images/giggles-day-care-logo.png",
+    "membershipLevel": "bronze"
   }
 ]
