@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the business community of Valley Floor with our Chamber of Commerce. 
+    Our platform offers invaluable resources and networking opportunities to help your business thrive. Join us 
+    today and be a part of the vibrant and growing economy of Valley Floor.">
+    <title>VF Chamber of Commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="../dist/output.css" rel="stylesheet">
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/lazy.js"></script>
+</head>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
+
+<body>
+    <header class="fixed top-0 w-full bg-slate-700 text-slate-50 z-40">
+        <div id="message" class="left-32 fixed bg-blue-500 text-white py-2 px-4 flex justify-between items-center z-50">
+            <span class="mr-2">Join us Wednesday night for a party!</span>
+        </div>
+        <div class="grid grid-cols-3 grid-rows-1 h-56 lg:h-32">
+            <div class="flex items-center">
+                <picture class="max-h-28 w-auto rounded-md pl-2" loading="lazy">
+                    <source srcset="./images/main-logo-black.webp" type="image/webp" loading="lazy">
+                    <img class="h-28 rounded-md" src="./images/main-logo-black.webp"
+                        alt="valley floor chamber of commerce" loading="lazy">
+                </picture>
+            </div>
+
+            <div id="icons" class="flex flex-row items-center justify-end p-3 space-x-3 flex-wrap col-start-3">
+                <div id="today" class="justify-start lg:justify-end p-3 text-xl"></div>
+                <div>
+                    <a href="https://www.facebook.com/" class="p-3">
+                        <i class="fab fa-facebook-f text-gray-300 text-4xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="p-3">
+                        <i class="fab fa-instagram text-gray-300 text-4xl"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="p-3">
+                        <i class="fab fa-twitter text-gray-300 text-4xl"></i>
+                    </a>
+                    <a href="mailto:example@example.com" class="p-3">
+                        <i class="far fa-envelope text-gray-300 text-4xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="fixed top-56 lg:top-32 w-full bg-slate-700 z-40 shadow-md" id="navbar">
+        <button class="block md:hidden absolute left-0 top-[-32px] ml-4" id="navbar-toggle">
+            <svg class="fill-current h-6 w-6 text-slate-50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path
+                    d="M0 3a3 3 0 0 1 3-3h14a3 3 0 0 1 0 6H3a3 3 0 0 1-3-3zm0 8a3 3 0 0 1 3-3h14a3 3 0 0 1 0 6H3a3 3 0 0 1-3-3zm0 8a3 3 0 0 1 3-3h14a3 3 0 0 1 0 6H3a3 3 0 0 1-3-3z" />
+            </svg>
+        </button>
+        <ul class="hidden md:flex text-slate-200 w-full text-center items-center [&>*]:w-full lg:[&>*]:w-3/12"
+            id="navbar-menu">
+            <li class="hover:bg-slate-200 hover:text-slate-700  cursor-pointer p-2">
+                <a href="./index.html" class="block text-lg">Home</a>
+            </li>
+            <li class="hover:bg-slate-200 hover:text-slate-700 !bg-slate-200 !text-slate-700 cursor-pointer p-2">
+                <a href="./discover.html" class="block text-lg">Discover</a>
+            </li>
+            <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
+                <a href="./join.html" class="block text-lg">Join</a>
+            </li>
+            <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
+                <a href="./directory.html" class="block text-lg">Directory</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="mt-44 bg-white h-5/6">
+        <section id="discover" class="w-full p-6 grid gap-6 grid-cols-1 grid-rows-5 [&>*]:bg-slate-200 [&>*]:rounded-md [&>div]:w-full [&>*]:shadow-lg">
+            <div class="flex items-center">
+                <picture id="war_remnants_picture" >
+                    <img src="https://dummyimage.com/640x360/fff/aaa" data-src="./images/optimized/war_remnants.jpeg"
+                        alt="War Remnants Museum" class="!w-14">
+                </picture>
+                <p class="p-6">
+                    The War Remnants Museum in Ho Chi Minh City is a sobering reminder of the atrocities of the Vietnam War,
+                    featuring exhibits of war machinery, photographs, and personal accounts.
+                </p>
+            </div>
+            <div class="flex items-center">
+                <picture id="street_market_picture" class="max-w-[340px]">
+                    <img src="https://dummyimage.com/640x360/fff/aaa" data-src="./images/optimized/street-market.jpeg" alt="Street Market" class="!max-w-xs">
+                </picture>
+                <p class="p-6">
+                    Ho Chi Minh City's street markets are a vibrant display of local culture and commerce, offering everything from
+                    fresh produce to handmade crafts and souvenirs.
+                </p>
+            </div>
+            <div class="flex items-center">
+                <picture id="stock_exchange_picture" class="!max-w-[15%]">
+                    <img src="https://dummyimage.com/640x360/fff/aaa" data-src="./images/optimized/stock_exchange.png" alt="Stock Exchange" >
+                </picture>
+                <p class="p-6">
+                    The Ho Chi Minh City Stock Exchange, located in the heart of the city's financial district, is a hub of activity
+                    for traders and investors seeking to buy and sell stocks and other securities.
+                </p>
+            </div>
+            <div class="flex items-center">
+                <picture id="museum_picture" class="max-w-[340px]">
+                    <img src="https://dummyimage.com/640x360/fff/aaa" data-src="./images/optimized/museum.jpeg" alt="Museum" class="!max-w-xs">
+                </picture>
+                <p class="p-6">
+                    Ho Chi Minh City is home to numerous museums, showcasing the city's rich history, art, and culture. Visitors can
+                    explore exhibits on everything from traditional Vietnamese crafts to contemporary art.
+                </p>
+            </div>
+            <div class="flex items-center">
+                <picture id="mausoleum_picture" class="max-w-[340px]">
+                    <img src="https://dummyimage.com/640x360/fff/aaa" data-src="./images/optimized/mausoleum.jpeg" alt="Mausoleum" class="!max-w-xs">
+                </picture>
+                <p class="p-6">
+                    The Ho Chi Minh Mausoleum is a solemn monument to the revered Vietnamese leader, Ho Chi Minh. Visitors can pay
+                    their respects to his embalmed body, which lies in state within the mausoleum.
+                </p>
+            </div>
+        
+        </section>
+        <div>
+            <p>
+                You last visited this page <span id="time_difference"></span> days
+                ago.
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-slate-700">
+        <div class="flex">
+            <picture class="max-h-28 w-auto rounded-md p-2">
+                <source srcset="./images/main-logo-black.webp" type="image/webp">
+                <img class="h-28 rounded-md" src="./images/main-logo-black.webp" alt="valley floor chamber of commerce">
+            </picture>
+            <div>
+                <a
+                    href="https://www.google.com/maps/place/Dang+Tran+Con+Primary+School/@10.7618489,106.6951126,1069a,35y,54.21h,4.01t/data=!3m1!1e3!4m9!1m2!2m1!1sho+chi+minh!3m5!1s0x31752f130cb7469f:0x9ea847b77b75af3c!8m2!3d10.7607888!4d106.6973771!16s%2Fg%2F1tfdwbmr!5m1!1e4">
+                    <i class="fas fa-map-marker-alt text-6xl text-gray-300 mx-4 mt-8"></i>
+                </a>
+            </div>
+            <div class="text-slate-50 align-middle mt-[28px]">
+                <h2 class="align-middle">Valley Floor Chamber of Commerce</h2>
+                <p class="align-middle">
+                    203 Đ. Bến Vân Đồn, Phường 2, Quận 4,<br>
+                    Thành phố Hồ Chí Minh, Vietnam
+                </p>
+            </div>
+
+            <div class=" text-slate-50 absolute right-6 mt-[28px] text-right">Contact Us:<br>+84 555 555 5555</div>
+
+        </div>
+        <div class="text-center p-3">
+            <p class="text-slate-400">
+                &copy; <span id="year"></span> | Bryan Welton III | Rexburg, ID
+            </p>
+            <p class="text-slate-400">Last Modified: <span id="lastmodified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
