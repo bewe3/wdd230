@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
             newBusiness.setAttribute("id", "spot");
             newBusiness.innerHTML = `
         <a href="${selectedBusiness.url}"><img src="${selectedBusiness.logo}" class="h-28 rounded-md"></a>
-        <h1>${selectedBusiness.name}</h1>
-        <p>${selectedBusiness.address}</p>
-        <p>${selectedBusiness.phone}</p>
+        <h1 class="text-center">${selectedBusiness.name}</h1>
+        <p class="text-center">${selectedBusiness.address}</p>
+        <p class="text-center">${selectedBusiness.phone}</p>
         `;
             spot.append(newBusiness);
             array.splice(randomint, 1);
