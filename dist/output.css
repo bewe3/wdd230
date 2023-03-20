@@ -636,6 +636,10 @@ video {
   grid-row-start: 3;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
