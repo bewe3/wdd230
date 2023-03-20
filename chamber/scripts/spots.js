@@ -1,39 +1,46 @@
-const businesses = "./data/businesses.json";
+window.onload = function () {
+    const spot = document.querySelector("#spots");
 
-function spots(businessList){
-    const spots = document.querySelector("#spots"); 
-    businessList = businessList.filter(x => x.membershipLevel == 'gold' || x.membershipLevel == 'silver');
-    spotlights = [];
-    for (let i = 0; i < 3; i++){
-        var elt = Math.floor(Math.random() * businessList.length)
-        spotlights.push(businessList.splice(elt,1));
+    const dataPath = "./data/businesses.json";
+
+    console.log(dataPath)
+
+    async function loadJsonData() {
+        const response = await fetch(dataPath);
+        const data = await response.json();
+        return data;
     }
-    console.log(businessList)
 
-    businessList.forEach((businessList) => {
-        let spotlight = document.createElement("section");
-        spotlight.innerHTML = `
-        <h2>${businessList.name}</h2>
-        <img src="${businessList.imageUrl}" alt="${businessList.name} loading="lazy">
-        <h3>"${businessList.phrase}"</h3>
-        <h4>${businessList.websiteUrl}</h4>
-        <h4>${businessList.phoneNumber}</h4><hr>
+    async function loadData() {
+        const descriptionBusData = await loadJsonData();
+        let idArray = [];
+
+        descriptionBusData.map(({ membership, id }) => {
+            if (membership === "gold") {
+                idArray.push(id);
+            }
+        });
+
+        for (let i = 0; i < 3; i++) {
+            let rndIndex = Math.floor(Math.random() * idArray.length);
+            const selectedId = idArray[rndIndex];
+            const selectedBusData = descriptionBusData.find(
+                (bus) => bus.id === selectedId && bus.membership === "gold"
+            );
+
+            const newBusDiv = document.createElement("div");
+            newBusDiv.setAttribute("id", "spot");
+            newBusDiv.innerHTML = `
+        <a href="${selectedBusData.url}"><img src=""></a>
+        <h1>${selectedBusData.name}</h1>
+        <p>${selectedBusData.address}</p>
+        <p>${selectedBusData.phone}</p>
         `;
-        spots.appendChild(spotlight);
-      }); 
-};
 
-async function data() {
-    const response = await fetch(businesses);
-    if (response.ok) {
-      const data = await response.json();
-      spots(data.businesses);
-    } else {
-      console.error("There was an error loading the businesses. Try again Later");
-      const spotlight = document.querySelector("#spots"); 
-      spotlight.innerHTML = "<section><h1>There was an error loading the businesses. Try again Later.</h1></section>";
+            spot.append(newBusDiv);
+            idArray.splice(rndIndex, 1);
+        }
     }
-  }
-  
-  data();
 
+    loadData();
+}
