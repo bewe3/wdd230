@@ -10,6 +10,7 @@ window.onload = function () {
 
     const formattedDate = `${dayOfWeek}, ${dayOfMonth} ${monthOfYear} ${year}`;
     document.querySelector("#today").textContent = formattedDate;
+    document.querySelector('#year').textContent = `${year}`;
 }
 
 function displayMessageBanner() {
@@ -25,3 +26,7 @@ function displayMessageBanner() {
   }
 }
 window.addEventListener('load', displayMessageBanner);
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#lastmodified').textContent = document.lastModified;
+});
