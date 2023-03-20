@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+    --main: #121e12;
+    --main-light: #1f3a22;
+    --background-light: #Fcf8f2;
+    --background-dark: #e7cbaa;
+    --frame: #b89965;
+    --text-main: #292826;
+    --text-subtitle: #565452;
+    --text-footer: #b89965;
+}
+
+html {
+    background-color: var(--main);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-main);
+}
+
+header {
+    background-color: var(--background-light);
+    margin: auto;
+    border-style: none none solid none;
+    border-width: thick;
+    border-color: var(--background-dark);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    font-family: 'Ms Madi', cursive;
+    display: flex;
+    align-items: center;
+}
+
+#profile-box {
+    padding: 1em;
+    min-height: 125px;
+    max-height: 200px;
+    left: 15px;
+    display: inline-flex;
+}
+
+#profile {
+    max-width: 12%;
+    border-radius: 7%;
+    min-height: 75px;
+    max-height: 150px;
+    min-width: 75px;
+    max-width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-style: solid;
+    border-width: thick;
+    border-color: var(--frame);
+}
+
+#title-name-flex {
+    font-size: 36pt;
+
+}
+
+#title {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-subtitle);
+    font-size: 5vw;
+}
+
+#title,
+#name {
+    width: 100%;
+}
+
+#name {
+    font-size: 7.4vw;
+}
+
+#document-body-background {
+    margin: auto;
+    background-color: var(--background-dark);
+    max-width: 75%;
+    margin-top: 225px;
+    padding: 1em;
+}
+
+#document-body {
+    margin: auto;
+    background-color: var(--background-light);
+    min-height: 80%;
+    padding: 1em;
+}
+
+#container {
+    display: flex;
+}
+
+#WDD,
+#tests {
+    padding: 0.5em;
+    width: 50%;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+#spacer {
+    min-height: 300px;
+}
+
+footer {
+    display: flex;
+    background-color: var(--main-light);
+    position: fixed;
+    bottom: 0;
+    padding: 1em;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    color: var(--text-footer);
+    vertical-align: middle;
+    flex-direction: column;
+    font-size: 3vw;
+}
+
+footer p {
+    display: block;
+}
+
+footer span {
+    display: inline-flex;
+}
+
+#last-modified {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (min-width: 640px) {
+    #title {
+        font-size: 24pt;
+    }
+
+    #name {
+        font-size: 40pt;
+    }
+
+    footer {
+        font-size: 10pt;
+    }
+}

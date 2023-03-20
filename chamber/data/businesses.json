@@ -1,0 +1,66 @@
+[
+  {
+    "name": "The Green Olive",
+    "address": "123 Nguyen Hue Street, District 1, Ho Chi Minh City",
+    "phone": "+84 28 3821 8400",
+    "url": "http://www.thegreenolive.com/",
+    "logo": "./images/the-green-olive-logo.png",
+    "membershipLevel": "gold"
+  },
+  {
+    "name": "Blue Sky Resort",
+    "address": "789 Le Lai Street, District 4, Ho Chi Minh City",
+    "phone": "+84 28 3826 7100",
+    "url": "http://www.blueskyresort.com/",
+    "logo": "./images/blue-sky-resort-logo.png",
+    "membershipLevel": "silver"
+  },
+  {
+    "name": "Fashionable Footwear",
+    "address": "456 Nguyen Trai Street, District 5, Ho Chi Minh City",
+    "phone": "+84 28 3838 7400",
+    "url": "http://www.fashionablefootwear.com/",
+    "logo": "./images/fashionable-footwear-logo.png",
+    "membershipLevel": "bronze"
+  },
+  {
+    "name": "Gala Events & Catering",
+    "address": "111 Vo Thi Sau Street, District 3, Ho Chi Minh City",
+    "phone": "+84 28 3842 6300",
+    "url": "http://www.galaevents.com/",
+    "logo": "./images/gala-events-logo.png",
+    "membershipLevel": "gold"
+  },
+  {
+    "name": "Tech Solutions",
+    "address": "222 Nguyen Van Cu Street, District 7, Ho Chi Minh City",
+    "phone": "+84 28 5412 8100",
+    "url": "http://www.techsolutions.com/",
+    "logo": "./images/tech-solutions-logo.png",
+    "membershipLevel": "silver"
+  },
+  {
+    "name": "Mega Mart",
+    "address": "333 Le Duan Street, District 1, Ho Chi Minh City",
+    "phone": "+84 28 3824 2200",
+    "url": "http://www.megamart.com/",
+    "logo": "./images/mega-mart-logo.png",
+    "membershipLevel": "bronze"
+  },
+  {
+    "name": "The Coffee House",
+    "address": "456 Nguyen Thi Minh Khai Street, District 3, Ho Chi Minh City",
+    "phone": "+84 28 3827 5321",
+    "url": "http://www.thecoffeehouse.com/",
+    "logo": "./images/the-coffee-house-logo.png",
+    "membershipLevel": "gold"
+  },
+  {
+    "name": "The Artistic Hair Salon",
+    "address": "789 Ton That Thuyet Street, District 4, Ho Chi Minh City",
+    "phone": "+84 28 3832 9422",
+    "url": "http://www.artistic-hair.com/",
+    "logo": "./images/the-artistic-hair-salon-logo.png",
+    "membershipLevel": "silver"
+  }
+]
