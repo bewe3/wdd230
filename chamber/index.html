@@ -75,12 +75,60 @@
     </ul>
 </nav>
     
-    <main class="directory-main">
-        <div id="directory-selector">
-            <button id="directory-grid" class="active">⋮⋮⋮</button>
-            <button id="directory-list">&equiv;</button>
+    <main
+        class="mt-44 bg-white h-5/6">
+        <div class="p-6 grid gap-6 grid-cols-1 grid-rows-6 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-5 lg:grid-rows-3 h-3/4 [&>*]:bg-slate-200 [&>*]:rounded-md [&>*]:w-full [&>#non-hero]:p-6 [&>*]:shadow-lg">    
+            <div
+                class="row-start-1 md:row-start-1 md:col-span-2 lg:row-start-1 lg:col-span-2 lg:col-start-2 lg:row-span-2 overflow-clip relative" id="hero">
+                
+                <img src="./images/51353687290_a086973630_b.jpg" alt="hero drone shot of city skyline" class="object-cover h-full w-full" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90 h-full w-full z-20"></div>
+                <h1 class="absolute text-slate-50 mt-[-96px] ml-8 text-4xl z-30 font-semibold tracking-wider">Welcome to Valley Floor</h1>
+            </div>
+            <div class="row-start-4 md:row-start-2 md:col-span-2 lg:row-start-3 lg:col-span-2 lg:col-start-2" id="non-hero">
+                <div class="fake-news">
+                    <h2 class="font-bold ">Ho Chi Minh Chamber of Commerce announces new partnership</h2>
+                    <p>The Ho Chi Minh Chamber of Commerce has announced a new partnership with a leading international business
+                        group. The move is expected to boost trade and investment opportunities in the region, and provide a
+                        platform for local businesses to connect with&#8230;</p>
+                        <br>
+                    <a href="https://english.thesaigontimes.vn/" class="read-more"
+                        target="_blank">Read more...&nbsp;<i class="fa-solid fa-up-right-from-square text-xs align-top"></i></a>
+                </div>
+            </div>
+            <div class="spots row-start-5 md:row-start-3 md:col-span-2 lg:col-start-4 lg:row-span-3 [&>div]:rounded-md [&>div]:bg-slate-300 [&>div]:p-6 grid gap-6 [&>div]:shadow-md" id="non-hero">
+            </div>
+            <div class="row-start-6 md:row-start-4 md:col-span-2 lg:col-start-1 lg:row-start-3 lg:col-span-1 " id="non-hero">
+                <p>Looking to connect with local businesses and entrepreneurs in Ho Chi Minh City? <br><br>Become a member of the Valley
+                    Floor Chamber of Commerce and gain access to exclusive networking events, professional development
+                    opportunities, and a supportive community of like-minded individuals.</p>
+                <a href="./join.html" class="bg-slate-800 text-white py-2 px-4 rounded-md mt-8 inline-block hover:bg-slate-700">Join
+                    Now</a>
+            </div>
+            <div class="row-start-2 md:row-start-5 lg:col-start-1 lg:row-start-1" id="non-hero">
+                <h1 class="text-slate-800 font-bold text-center">Events</h1>
+                <p>Join us for a one-of-a-kind Meet and Greet event with local business leaders, entrepreneurs, and innovators at
+                    the Valley Floor Chamber of Commerce! Discover the latest trends and insights in the industry, exchange business
+                    ideas, and network with like-minded individuals in a vibrant and dynamic atmosphere.</p>
+            </div>
+            <div class="row-start-3 md:row-start-5 lg:col-start-1 lg:row-start-2" id="non-hero">
+                <h1 class="text-slate-800 font-bold text-center">Weather</h1>
+                <div id="weather-info">
+                    <figure>
+                        <img src="https://dummyimage.com/640x360/fff/aaa" alt="" id="weatherIcon" class="m-auto">
+                        <figcaption></figcaption>
+                    </figure>
+                
+                    <h3><span id="temperature"></span>&deg;F <br><span id="description"></span></h3>
+                    <br>
+                </div>
+                <hr>
+                <div id="wind-info">
+                    <h4>Wind Speed: <span id="windspeed"></span>mph</h4>
+                    <h4>Wind Chill: <span id="windchill"></span></h4>
+                </div>
+            </div>
         </div>
-        <div id="directory-data" class="directory-cards"></div>
     </main>
 
     <footer class="bg-slate-700">
