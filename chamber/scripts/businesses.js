@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
  
 
     async function getBusinessData() {
-    const response = await fetch(url);
+        const response = await fetch(url);
+        console.log(response)
     if (response.ok) {
         const data = await response.json();
         displayBusinesses(data.businesses);
