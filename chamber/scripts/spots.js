@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', () => {
     const spot = document.querySelector("#spots");
 
     const dataPath = "./data/businesses.json";
@@ -32,7 +32,7 @@ window.onload = function () {
             const newBusDiv = document.createElement("div");
             newBusDiv.setAttribute("id", "spot");
             newBusDiv.innerHTML = `
-        <a href="${selectedBusData.url}"><img src=""></a>
+        <a href="${selectedBusData.url}"><img src="${selectedBusData.logo}"></a>
         <h1>${selectedBusData.name}</h1>
         <p>${selectedBusData.address}</p>
         <p>${selectedBusData.phone}</p>
@@ -44,4 +44,4 @@ window.onload = function () {
     }
 
     loadData();
-}
+});
