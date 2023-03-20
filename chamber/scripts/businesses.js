@@ -1,62 +1,63 @@
-// Toggle active/not active buttons
-document.addEventListener('DOMContentLoaded', () => {
-    var gridSelector = document.querySelector('.grid-button');
-    var listSelector = document.querySelector('.list-button');
-    var directoryData = document.querySelector('#directory-grid');
 
+window.onload = function () {
+    var gridSelector = document.querySelector("#directory-grid");
+    var listSelector = document.querySelector('#directory-list');
+    var directoryData = document.querySelector('#directory-data');
+
+    //toggle grid
     gridSelector.addEventListener('click', ()=>{
-        if (!gridSelector.classList.contains('directory-active')){    
-            gridSelector.classList.add('directory-active');
-            listSelector.classList.remove('directory-active');
+        if (!gridSelector.classList.contains('active')){    
+            gridSelector.classList.add('active');
+            listSelector.classList.remove('active');
             directoryData.classList.add('directory-cards')
             directoryData.classList.remove('directory-list')
         }
     });
 
+    //toggle list
     listSelector.addEventListener('click', ()=>{
-        if (!listSelector.classList.contains('directory-active')){
-            listSelector.classList.add('directory-active');
-            gridSelector.classList.remove('directory-active');
+        if (!listSelector.classList.contains('active')){
+            listSelector.classList.add('active');
+            gridSelector.classList.remove('active');
             directoryData.classList.add('directory-list')
             directoryData.classList.remove('directory-cards')
         }
     });
 
-    // Load JSON file
+    //json stuff
     const url = "./data/businesses.json";
 
-    const displayBusinesses = (businesss) => {
-    const cards = document.querySelector(".directory-cards"); // select the output container element
+    const displayBusinesses = (businessses) => {
+    const cards = document.querySelector(".directory-cards"); 
 
-    businesss.forEach((business) => {
+    businessses.forEach((businesses) => {
         let card = document.createElement("section");
         card.innerHTML = `
-        <img src="${business.imgURL}">
-        <p>${business.businessName}</p>
-        <p>${business.streetAddress}</p>
-        <p>${business.cityStateZip}</p>
-        <p><a href="${business.websiteURL}">${business.websiteURL}</a></p>
+        <img src="${businesses.logo}" alt="${businesses.name}">
+        <p>${businesses.name}</p>
+        <p>${businesses.address}</p>
+        <p><a href="${businesses.url}">${businesses.name}</a></p>
         `;
-        if (business.membershipLevel=='gold'){
+        if (businesses.membershipLevel=='Gold'){
         card.classList.add('gold-member');
         }
         cards.appendChild(card);
     }); 
     
-    };
+    }; 
 
     async function getBusinessData() {
     const response = await fetch(url);
     if (response.ok) {
         const data = await response.json();
         displayBusinesses(data.businesses);
-        console.table(data.businesses);
     } else {
-        console.error("There was an error loading the data.");
-        const cards = document.querySelector(".directory-cards");
-        cards.innerHTML = "<section><h1>There was an error loading the data</h1></section>";
+        console.error("There was an error loading the businesses. Try again Later");
+        const cards = document.querySelector("directory-cards");
+        cards.innerHTML = "<section><h1>There was an error loading the businesses. Try again Later.</h1></section>";
     }
     }
 
     getBusinessData();
-});
+
+}
