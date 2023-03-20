@@ -23,7 +23,7 @@
     <div id="message" class="left-32 fixed bg-blue-500 text-white py-2 px-4 flex justify-between items-center z-50">
         <span class="mr-2">Join us Wednesday night for a party!</span>
     </div>
-    <div class="grid grid-cols-3 grid-rows-1 h-32">
+    <div class="grid grid-cols-3 grid-rows-1 h-56 lg:h-32">
         <div class="flex items-center">
             <picture class="max-h-28 w-auto rounded-md pl-2" loading="lazy">
                 <source srcset="./images/main-logo-black.webp" type="image/webp" loading="lazy">
@@ -51,16 +51,27 @@
     </div>
 </header>
 
-<nav class="fixed top-32 w-full bg-slate-700 z-40 shadow-md">
-    <ul class="flex text-slate-200 w-full text-center items-center [&>*]:w-3/12">
-        <li class="hover:bg-slate-200 hover:text-slate-700 !bg-slate-200 !text-slate-700 cursor-pointer p-2"><a href="./index.html"
-                class="block text-lg">Home</a></li>
-        <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2"><a href="./discover.html"
-                class="block text-lg">Discover</a></li>
-        <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2"><a href="./join.html"
-                class="block text-lg">Join</a></li>
-        <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2"><a href="./directory.html"
-                class="block text-lg">Directory</a></li>
+<nav class="fixed top-56 lg:top-32 w-full bg-slate-700 z-40 shadow-md" id="navbar">
+    <button class="block md:hidden absolute left-0 top-[-32px] ml-4" id="navbar-toggle">
+        <svg class="fill-current h-6 w-6 text-slate-50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path
+                d="M0 3a3 3 0 0 1 3-3h14a3 3 0 0 1 0 6H3a3 3 0 0 1-3-3zm0 8a3 3 0 0 1 3-3h14a3 3 0 0 1 0 6H3a3 3 0 0 1-3-3zm0 8a3 3 0 0 1 3-3h14a3 3 0 0 1 0 6H3a3 3 0 0 1-3-3z" />
+        </svg>
+    </button>
+    <ul class="hidden md:flex text-slate-200 w-full text-center items-center [&>*]:w-full lg:[&>*]:w-3/12" id="navbar-menu">
+        <li class="hover:bg-slate-200 hover:text-slate-700 !bg-slate-200 !text-slate-700 cursor-pointer p-2">
+            <a href="./index.html" class="block text-lg">Home</a>
+        </li>
+        <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
+            <a href="./discover.html" class="block text-lg">Discover</a>
+        </li>
+        <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
+            <a href="./join.html" class="block text-lg">Join</a>
+        </li>
+        <li class="hover:bg-slate-200 hover:text-slate-700 cursor-pointer p-2">
+            <a href="./directory.html" class="block text-lg">Directory</a>
+        </li>
     </ul>
 </nav>
     

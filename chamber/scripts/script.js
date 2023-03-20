@@ -29,4 +29,17 @@ window.addEventListener('load', displayMessageBanner);
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#lastmodified').textContent = document.lastModified;
+
+    const navbarMenu = document.getElementById("navbar-menu");
+    const navbarToggle = document.getElementById("navbar-toggle");
+
+    navbarToggle.addEventListener("click", () => {
+        navbarMenu.classList.toggle("hidden");
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 800) {
+            navbarMenu.classList.remove("hidden");
+        }
+    });
 });
