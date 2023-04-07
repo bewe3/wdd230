@@ -1,0 +1,37 @@
+@media screen and (min-width: 1000px) {
+    #order {
+        width: 100%;
+    }
+
+    #order button{
+        margin-top: 30px;
+    }
+
+    #order p {
+        width: 50%;
+        font-size: 1.5rem;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    #welcome-text {
+        top: 15vh;
+        right: 4vw;
+    }
+
+    .main-image img {
+        margin-top: -225px;
+    }
+
+    footer {
+        flex-direction: row;
+    }
+
+    footer .right-section i {
+        color: var(--green);
+        font-size: 48px;
+        cursor: pointer;
+        padding: 0.5em;
+    }
+
+}
