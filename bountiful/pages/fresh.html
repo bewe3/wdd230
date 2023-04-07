@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../styles/medium.css">
     <link rel="stylesheet" href="../styles/large.css">
     <script src="../scripts/lazy.js"></script>
-    <script src="../scripts/weather.js"></script>
     <script src="../scripts/footer.js"></script>
     <script src="../scripts/navbar.js"></script>
     <script src="../scripts/json.js"></script>
@@ -62,15 +61,11 @@
         <div class="form-container">
             <h1>Build Your Own Specialty Drink</h1>
             <hr>
-            <form id="specialty-form" action="confirmation.html" method="post">
+            <form id="specialty-form">
                 <h2>Personal Info</h2>
                 <div class="form-group">
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name">
+                    <label for="name">First Name:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
@@ -95,8 +90,8 @@
                     <select id="fruit3" class="fruit" name="fruit3" required></select>
                 </div>
                 <div class="form-group">
-                    <label for="special-instructions">Special Instructions (optional):</label>
-                    <textarea id="special-instructions" name="special-instructions"></textarea>
+                    <label for="special">Special Instructions (optional):</label>
+                    <textarea id="special" name="special"></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Submit</button>
             </form>

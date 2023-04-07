@@ -1,0 +1,10 @@
+#order-data{
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: -40vw;
+    z-index: 40;
+    position: relative;
+}
